@@ -27,7 +27,7 @@
       </p>
       <ul>
         <li>
-          💬 Participant forum: <a href="mailto:semeval2026-task10-participants@googlegroups.com">semeval2026-task10-participants@googlegroups.com</a>
+          💬 Participant forum: <span id="participant-email"></span>
         </li>
       </ul>
 
@@ -36,9 +36,19 @@
       </p>
       <ul>
         <li>
-          📧 Organizers: <a href="mailto:semeval2026-task10-organizers@googlegroups.com">semeval2026-task10-organizers@googlegroups.com</a>
+          📧 Organizers: <span id="organizer-email"></span>
         </li>
       </ul>
+
+      <script>
+        const at = "&#64;";
+        const dot = "&#46;";
+        const participant = "semeval2026-task10-participants" + at + "googlegroups" + dot + "com";
+        const organizer = "semeval2026-task10-organizers" + at + "googlegroups" + dot + "com";
+
+        document.getElementById("participant-email").innerHTML = `<a href="mailto:${participant}">${participant}</a>`;
+        document.getElementById("organizer-email").innerHTML = `<a href="mailto:${organizer}">${organizer}</a>`;
+      </script>
 
       <p>
         We look forward to hearing from you!

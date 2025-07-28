@@ -48,10 +48,20 @@
             <hr>
             <p>
                 📬 Join our mailing list:
-                <a href="mailto:semeval2026-task10-participants@googlegroups.com">semeval2026-task10-participants@googlegroups.com</a><br>
+                <span id="participant-email" class="email-link"></span><br>
                 📧 Contact the organizers:
-                <a href="mailto:semeval2026-task10-organizers@googlegroups.com">semeval2026-task10-organizers@googlegroups.com</a>
+                <span id="organizer-email" class="email-link"></span>
             </p>
+
+            <script>
+                const at = "&#64;";
+                const dot = "&#46;";
+                const participant = "semeval2026-task10-participants" + at + "googlegroups" + dot + "com";
+                const organizer = "semeval2026-task10-organizers" + at + "googlegroups" + dot + "com";
+
+                document.getElementById("participant-email").innerHTML = `<a href="mailto:${participant}">${participant}</a>`;
+                document.getElementById("organizer-email").innerHTML = `<a href="mailto:${organizer}">${organizer}</a>`;
+            </script>
         </section>
     </main>
 
