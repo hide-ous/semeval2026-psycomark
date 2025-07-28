@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data | PsyCoMark</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>PsyCoMark @ SemEval 2026</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="task.html">Task</a>
+      <a href="data.html">Data</a>
+      <a href="baselines.html">Baselines</a>
+      <a href="organizers.html">Organizers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Dataset Description</h2>
+    <p>
+      The PsyCoMark dataset is built from Reddit submission statements — user-written summaries accompanying media submissions. These are rich in narrative content and ideal for identifying psycholinguistic markers.
+    </p>
+
+    <h3>Annotation</h3>
+    <p>
+      Comments are annotated with binary conspiracy labels (<em>conspiracy</em>, <em>not conspiracy</em>, <em>can't tell</em>) and span-level markers based on psychological mechanisms of conspiracy belief. Annotation was performed by native English speakers via Prolific and underwent rigorous quality control.
+    </p>
+
+    <h3>Statistics</h3>
+    <ul>
+      <li>~4,000 Reddit submission statements</li>
+      <li>Classes: 630 conspiracy, 655 not conspiracy, 361 can’t tell</li>
+      <li>Marker annotations:
+        <ul>
+          <li>Actor: 1276</li>
+          <li>Action: 1239</li>
+          <li>Effect: 1009</li>
+          <li>Victim: 929</li>
+          <li>Evidence: 989</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>Download</h3>
+    <p>
+      The full dataset is available via Zenodo:<br>
+      <a href="https://doi.org/10.5281/zenodo.15114172" target="_blank">https://doi.org/10.5281/zenodo.15114172</a>
+    </p>
+
+    <h3>Starter Pack</h3>
+    <p>
+      Use our GitHub repository for a starter pack with baseline code and rehydration scripts:<br>
+      <a href="https://github.com/hide-ous/semeval26_task10_starter_pack" target="_blank">https://github.com/hide-ous/semeval26_starter_pack</a>
+    </p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SemEval 2026 Task 10: PsyCoMark</p>
+  </footer>
+</div>
+</body>
+</html>
