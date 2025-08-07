@@ -1,87 +1,93 @@
+/* Main layout */
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #f8f9fa;
     color: #212529;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 960px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem;
 }
 
-header {
-    text-align: center;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #dee2e6;
+/* Navbar */
+.navbar {
+    background-color: #0d6efd;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
 }
 
-header h1 {
-    font-size: 2rem;
-    margin-bottom: 0.2rem;
-    color: #0d6efd;
-}
-
-header h2 {
+.navbar h1 {
+    margin: 0;
     font-size: 1.2rem;
-    font-weight: normal;
-    color: #6c757d;
-    margin-top: 0;
 }
 
-nav {
-    margin-top: 1rem;
+.nav-toggle {
+    font-size: 1.5rem;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
 }
 
-nav a {
-    margin: 0 0.75rem;
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
     text-decoration: none;
-    color: #0d6efd;
     font-weight: 500;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-main h2 {
+/* Join Button */
+.join-button.prominent {
+    background-color: white;
     color: #0d6efd;
-    margin-top: 2rem;
-}
-
-h3 {
-    margin-top: 1.5rem;
-}
-
-ul {
-    margin: 0.5rem 0 1rem 1.5rem;
-}
-
-.cta {
-    margin-top: 1rem;
-}
-
-.cta p a {
-    display: inline-block;
-    background-color: #0d6efd;
-    color: white;
+    font-weight: bold;
+    font-size: 1rem;
     padding: 0.5rem 1rem;
-    text-decoration: none;
     border-radius: 4px;
-    margin-right: 0.5rem;
+    text-decoration: none;
 }
 
-.cta p a:hover {
-    background-color: #0b5ed7;
+.join-button.prominent:hover {
+    background-color: #e6e6e6;
 }
 
+/* Footer */
 footer {
-    margin-top: 3rem;
     text-align: center;
     font-size: 0.9rem;
-    color: #6c757d;
-    border-top: 1px solid #dee2e6;
+    margin-top: 2rem;
     padding-top: 1rem;
+    border-top: 1px solid #ccc;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }
