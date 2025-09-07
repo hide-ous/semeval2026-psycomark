@@ -1,1 +1,21 @@
-<p>nav works!</p>
+<header class="site-header">
+  <div class="container nav-container">
+    <!-- Logo / Title -->
+    <a class="logo" routerLink="/">SemEval 2026 — PsyCoMark</a>
+
+    <!-- Navigation links -->
+    <nav class="nav-links">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a routerLink="/data" routerLinkActive="active">Data</a>
+      <a routerLink="/tasks" routerLinkActive="active">Tasks</a>
+      <a routerLink="/organizers" routerLinkActive="active">Organizers</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    </nav>
+
+    <!-- Join button -->
+    <a class="join-btn" href="https://groups.google.com/g/semeval2026-task10-participants" target="_blank" rel="noopener">
+      Join
+    </a>
+  </div>
+</header>
