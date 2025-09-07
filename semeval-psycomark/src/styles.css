@@ -13,6 +13,13 @@ body {
   padding: 1rem;
 }
 
+main {
+  max-width: 960px;   /* keeps things readable */
+  margin: 0 auto;     /* centers horizontally */
+  padding: 2rem 1rem; /* breathing space */
+  box-sizing: border-box;
+}
+
 /* Navbar */
 .navbar {
   background-color: #0d6efd;
