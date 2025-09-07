@@ -1,0 +1,40 @@
+<main>
+  <h2>Contact Us</h2>
+  <p>
+    For general questions, clarifications, or help during the competition, please reach out to the public mailing list:
+  </p>
+  <ul>
+    <li>
+      💬 Participant forum: <span id="participant-email"></span>
+    </li>
+  </ul>
+
+  <p>
+    For private matters or organizational questions:
+  </p>
+  <ul>
+    <li>
+      📧 Organizers: <span id="organizer-email"></span>
+    </li>
+  </ul>
+
+  <script>
+    const at = "&#64;";
+    const dot = "&#46;";
+    const participant = "semeval2026-task10-participants" + at + "googlegroups" + dot + "com";
+    const organizer = "semeval2026-task10-organizers" + at + "googlegroups" + dot + "com";
+
+    document.getElementById("participant-email").innerHTML = `<a href="mailto:${participant}">${participant}</a>`;
+    document.getElementById("organizer-email").innerHTML = `<a href="mailto:${organizer}">${organizer}</a>`;
+  </script>
+
+  <p>
+    We look forward to hearing from you!
+  </p>
+  <hr>
+
+  <div style="text-align: center; margin-top: 2rem;">
+    <a class="join-button prominent" href="https://groups.google.com/g/semeval2026-task10-participants" target="_blank">📬 Join the Mailing List</a>
+  </div>
+
+</main>
