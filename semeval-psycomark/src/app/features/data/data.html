@@ -1,49 +1,108 @@
 <main>
-  <h2>Dataset Description</h2>
+  <h1>The PsyCoMark Dataset</h1>
   <p>
-    The PsyCoMark dataset is built from Reddit submission statements — user-written summaries accompanying media submissions. These are rich in narrative content and ideal for identifying psycholinguistic markers.
+    The PsyCoMark dataset is a novel resource for researchers and NLP practitioners focused on understanding and detecting conspiracy-related content in online conversations. It's built from Reddit submission statements and is ideal for identifying <strong>psycholinguistic markers</strong> of conspiracy beliefs.
   </p>
 
-  <h3>Annotation</h3>
-  <p>
-    Comments are annotated with binary conspiracy labels (<em>conspiracy</em>, <em>not conspiracy</em>, <em>can't tell</em>) and span-level markers based on psychological mechanisms of conspiracy belief. Annotation was performed by native English speakers via Prolific and underwent rigorous quality control.
-  </p>
-
-  <h3>Statistics</h3>
-
-  <h4>Trial Data (Development Phase)</h4>
+  <hr>
+  <h3>Access and Usage</h3>
   <ul>
-    <li>~1,000 Reddit submission statements</li>
-    <li>Classes: 630 conspiracy, 655 not conspiracy, 361 can’t tell</li>
-    <li>Marker annotations:
+    <li><strong>Download:</strong> The full dataset is available in <code>jsonl</code> format on <a href="https://doi.org/10.5281/zenodo.15114171" target="_blank">Zenodo</a> and has a persistent DOI.</li>
+    <li><strong>Rehydration:</strong> The raw text of the submission statements is <strong>not directly released</strong> to protect user privacy, but...</li>
+    <li><strong>GitHub Starter Pack:</strong> We provide a <a [href]="starterPackUrl" target="_blank" rel="noopener">starter pack</a> with baseline code and rehydration scripts is available on GitHub. </li>
+    <li><strong>License:</strong> The dataset is distributed under a <strong>CC-BY license</strong>.</li>
+  </ul>
+
+
+  <hr>
+
+  <h2>Dataset Statistics</h2>
+  <p>
+    This dataset contains over <strong>4,800</strong> annotated entries, comprising over <strong>4,100</strong> unique Reddit submission statements from more than <strong>190</strong> subreddits.
+  </p>
+
+  <h3>Annotation Coverage</h3>
+  <ul>
+    <li><strong>Unique Comments:</strong> There are over <strong>4,100</strong> unique Reddit submission statements.</li>
+    <li><strong>Annotation Depth:</strong> The dataset includes approximately <strong>4,800</strong> annotations in total. Around <strong>3,500</strong> comments have a single annotation, <strong>550</strong> have two, and <strong>50</strong> have more.</li>
+    <li><strong>Marker Density:</strong> Approximately <strong>4,000</strong> comments have at least one psycholinguistic marker annotation.
       <ul>
-        <li>Actor: 1276</li>
-        <li>Action: 1239</li>
-        <li>Effect: 1009</li>
-        <li>Victim: 929</li>
-        <li>Evidence: 989</li>
+        <li><strong>1,300</strong> comments contain all five marker types.</li>
+        <li><strong>1,200</strong> comments have four marker types.</li>
+        <li><strong>900</strong> comments have three marker types.</li>
+        <li><strong>400</strong> comments have two marker types.</li>
+        <li><strong>180</strong> comments have one marker type.</li>
       </ul>
     </li>
   </ul>
 
-  <h4>Full Training Data (Final Release)</h4>
+  <h3>Label Distribution</h3>
   <ul>
-    <li>Expected: &gt;4,000 Reddit submission statements</li>
-    <li>Balanced class and marker coverage</li>
-    <li>Includes data from over 190 subreddits, both conspiratorial and general-interest</li>
+    <li><strong>Conspiracy Detection:</strong> The distribution of the binary conspiracy labels is well-balanced for the training data, with a near-equal number of "Yes" and "No" labels.
+      <ul>
+        <li><strong>Yes (Conspiracy):</strong> 1,715 instances.</li>
+        <li><strong>No (Not Conspiracy):</strong> 2,263 instances.</li>
+        <li><strong>Can't Tell:</strong> 877 instances.</li>
+      </ul>
+    </li>
+    <li><strong>Marker Extraction:</strong> The dataset includes five types of psycholinguistic markers:
+      <ul>
+        <li><strong>Actor:</strong> 3,639 instances.</li>
+        <li><strong>Action:</strong> 3,601 instances.</li>
+        <li><strong>Effect:</strong> 2,916 instances.</li>
+        <li><strong>Evidence:</strong> 2,854 instances.</li>
+        <li><strong>Victim:</strong> 2,378 instances.</li>
+      </ul>
+    </li>
+    <li><strong>Inter-annotator agreement:</strong> The Krippendorff’s α for the binary conspiracy labels is 0.58, indicating a moderate level of agreement.</li>
+  </ul>
+
+  <hr>
+
+  <h2>Data Composition and Collection</h2>
+  <p>
+    The PsyCoMark dataset is composed of Reddit submission statements—user-written summaries of media submissions. The data was collected between January and March 2025, but the submission statements themselves span from March 2013 to December 2023.
+  </p>
+
+  <h3>Sampling Strategy</h3>
+  <p>
+    The dataset is a <strong>sample</strong> of Reddit submission statements, not a comprehensive collection. To ensure a sufficient number of conspiracy-related examples, a specific sampling strategy was employed.
+  </p>
+  <ul>
+    <li>The dataset oversamples comments that are likely to contain conspiracy theories.</li>
+    <li>Approximately <strong>1,150</strong> comments (1/4 of the total) were sourced from the <code>r/conspiracy</code> subreddit.</li>
+    <li>The remaining comments were taken from other subreddits with at least ten submission statements.</li>
+    <li>This oversampling means the dataset is not representative of the overall prevalence of conspiracy theories on Reddit.</li>
+  </ul>
+
+  <h3>Preprocessing and Annotation</h3>
+  <p>
+    The raw data underwent several preprocessing steps to prepare it for annotation:
+  </p>
+  <ul>
+    <li>Comments were filtered to a length of 160 to 1,000 characters.</li>
+    <li>Markdown formatting was converted to plain text, and URLs were replaced with the token <code>[URL]</code>.</li>
+    <li>Any comments containing quotes were removed to focus on the original author's text.</li>
+    <li>The annotation was performed by native English-speaking crowdworkers on the platform <strong>Prolific</strong>, who were paid an average of over £9 per hour.</li>
+    <li>Each submission statement was annotated with a binary conspiracy label (<strong>conspiracy</strong>, <strong>not conspiracy</strong>, or <strong>can't tell</strong>) and span-level markers for five psychological mechanisms.</li>
   </ul>
 
 
-  <h3>Download</h3>
+  <h2>Potential Uses</h2>
   <p>
-    The full dataset is available via Zenodo:<br>
-    <a href="https://doi.org/10.5281/zenodo.15114172" target="_blank">https://doi.org/10.5281/zenodo.15114172</a>
+    This dataset is designed for a variety of tasks related to computational social science and natural language processing:
   </p>
+  <ul>
+    <li><strong>Training models</strong> for conspiracy detection and marker extraction.</li>
+    <li><strong>Studying the linguistic signals</strong> of conspiratorial thinking.</li>
+    <li><strong>Cross-topic analysis</strong> of conspiracy-related discourse.</li>
+    <li><strong>Explaining and interpreting model decisions</strong> by leveraging marker spans.</li>
+  </ul>
 
-  <h3>Starter Pack</h3>
-  <p>
-    Use our GitHub repository for a starter pack with baseline code and rehydration scripts:<br>
-    <a href="https://github.com/hide-ous/semeval26_starter_pack" target="_blank">https://github.com/hide-ous/semeval26_starter_pack</a>
-  </p>
+  <div class="note">
+    ⚠️ <strong>Caution:</strong> The dataset oversamples conspiratorial content and should not be used to measure the overall prevalence of conspiracy theories on Reddit or beyond.
+  </div>
+
+
 
 </main>
