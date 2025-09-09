@@ -26,8 +26,6 @@ export class AnnotatedExampleComponent implements OnChanges {
 
   ngOnChanges(): void {
     this.tokens = this.buildTokenHighlights(this.text, this.spans);
-    console.log('AnnotatedExample tokens:', this.tokens);
-
   }
 
   private buildTokenHighlights(text: string, spans: Span[]): Token[] {

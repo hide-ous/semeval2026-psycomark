@@ -1,5 +1,6 @@
 {
-  "intro": "Annotate spans that indicate conspiracy-related psycholinguistic markers. Each aspect has a definition, details, example passage, and highlight spans (token indices).",
+  "intro": "Annotators were asked to highlight each conspiracy-related psycholinguistic marker in the comments. Markers could also overlap, coincide, and be nested! We provide more detail about each marker below.",
+
   "aspects": [
     {
       "label": "Actor",
