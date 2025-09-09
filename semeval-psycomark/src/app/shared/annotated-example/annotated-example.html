@@ -1,0 +1,15 @@
+<!-- src/app/shared/annotated-example/annotated-example.component.html -->
+<div class="annotated-doc">
+  <p class="text">
+    @for (tok of tokens; track $index) {
+      @if (!tok.label) {
+        <span>{{ tok.text }} </span>
+      } @else {
+        <mark [ngClass]="'aspect-' + tok.label" [title]="tok.note || tok.label">
+          {{ tok.text }}
+        </mark>
+        <span> </span>
+      }
+    }
+  </p>
+</div>

@@ -1,0 +1,43 @@
+<!-- src/app/features/task/annotation-instructions/annotation-instructions.component.html -->
+<section class="instructions">
+  @if (data$ | async; as data) {
+    @if (data.intro) {
+      <header class="intro">
+        <p>{{ data.intro }}</p>
+      </header>
+    }
+
+    <div class="aspects">
+      @for (a of data.aspects; track a.label) {
+        <section class="aspect">
+          <h2>{{ a.title }}</h2>
+          <p class="desc">{{ a.description }}</p>
+
+          <h3>Worked Example</h3>
+          <app-annotated-example
+            [text]="a.example.text"
+            [spans]="a.example.spans">
+          </app-annotated-example>
+
+          @if (a.details.length > 0) {
+            <h3>Details</h3>
+            <ul>
+              @for (d of a.details; track $index) {
+                <li>{{ d }}</li>
+              }
+            </ul>
+          }
+
+          @if (a.controlQuestions.length > 0) {
+            <h3>Control Questions</h3>
+            <ul>
+              @for (q of a.controlQuestions; track $index) {
+                <li>{{ q }}</li>
+              }
+            </ul>
+          }
+        </section>
+      }
+    </div>
+  }
+</section>

@@ -1,0 +1,13 @@
+/* src/app/features/task/annotation-instructions/annotation-instructions.component.css */
+.instructions { margin: 2rem 0; }
+.intro { margin-bottom: 1rem; }
+.aspects { display: grid; gap: 2rem; }
+.aspect h2 { margin: 0.5rem 0; }
+.desc { color: #444; }
+
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+}
+.example-card { background:#fafafa; border:1px solid #eee; border-radius:8px; padding:.5rem; }
