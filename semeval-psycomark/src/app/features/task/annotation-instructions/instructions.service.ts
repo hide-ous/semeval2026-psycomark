@@ -8,6 +8,6 @@ import { Observable } from 'rxjs';
 export class InstructionsService {
   constructor(private http: HttpClient) {}
   load(): Observable<InstructionsPayload> {
-    return this.http.get<InstructionsPayload>('/instructions.json');
+    return this.http.get<InstructionsPayload>('instructions.json');
   }
 }
