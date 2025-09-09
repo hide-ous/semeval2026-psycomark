@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './organizers.css'
 })
 export class Organizers {
+  private at = '@';
+  private dot = '.';
+
+  organizerEmail = `semeval2026-task10-organizers${this.at}googlegroups${this.dot}com`;
 
 }
