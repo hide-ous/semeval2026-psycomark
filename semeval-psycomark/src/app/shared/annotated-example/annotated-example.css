@@ -1,0 +1,20 @@
+/* src/app/shared/annotated-example/annotated-example.component.css */
+.annotated-doc { border: 1px solid #e5e7eb; border-radius: 8px; padding: 1rem; background: #fff; }
+.legend { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: .5rem; }
+.chip { padding: .15rem .5rem; border-radius: 999px; font-size: .8rem; border: 1px solid rgba(0,0,0,.08); }
+
+.text { white-space: pre-wrap; line-height: 1.7; }
+
+/* Colors per aspect — tweak to match your style.css if needed */
+.aspect-Actor    { background: rgba(255, 99, 132, .25);  }
+.aspect-Action   { background: rgba(54, 162, 235, .25);  }
+.aspect-Effect   { background: rgba(255, 206, 86, .35);  }
+.aspect-Victim   { background: rgba(75, 192, 192, .25);  }
+.aspect-Evidence { background: rgba(153, 102, 255, .25); }
+
+mark {
+  padding: 0 .2rem;
+  border-radius: 3px;
+  background: yellow;     /* ✅ visible default */
+  color: black;           /* ✅ ensure text is visible */
+}

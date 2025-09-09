@@ -1,9 +1,8 @@
-// src/app/shared/models/annotation.models.ts
 export type Aspect = 'Actor' | 'Action' | 'Effect' | 'Victim' | 'Evidence';
 
 export interface Span {
-  start: number;   // inclusive char index
-  end: number;     // exclusive char index
+  start: number;   // token start index
+  end: number;     // token end index
   label: Aspect;
   note?: string;
 }
@@ -15,9 +14,13 @@ export interface AnnotatedExample {
 
 export interface AspectInstruction {
   label: Aspect;
-  title: string;        // e.g., "Actor"
-  description: string;  // short guideline
-  examples: AnnotatedExample[];
+  title: string;
+  description: string;
+  color?: string;
+  numButton?: number;
+  example: AnnotatedExample;
+  details: string[];
+  controlQuestions: string[];
 }
 
 export interface InstructionsPayload {

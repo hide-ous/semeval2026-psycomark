@@ -1,59 +1,122 @@
 {
-  "intro": "Annotate spans that indicate the presence of conspiracy-related psycholinguistic markers. Use the five aspects below and follow the examples.",
+  "intro": "Annotate spans that indicate conspiracy-related psycholinguistic markers. Each aspect has a definition, details, example passage, and highlight spans (token indices).",
   "aspects": [
     {
       "label": "Actor",
       "title": "Actor",
-      "description": "Who is allegedly responsible for plotting or orchestrating the scheme.",
-      "examples": [
-        {
-          "text": "They say the shadowy intelligence agencies control all media narratives.",
-          "spans": [ { "start": 14, "end": 42, "label": "Actor", "note": "intelligence agencies" } ]
-        }
+      "color": "primary",
+      "numButton": 1,
+      "description": "Who is allegedly responsible for a malicious action or agenda?",
+      "example": {
+        "text": "SS: Just a reminder that various extremist groups that are out there, trying to recruit people, are actually CIA and other Alphabet agency Honeypots. In this case, the BBC is even admitting this guy is CIA but says he's only \"former\" CIA (yea right) and also they are making sure to create a link to Russia so they can continue with the narrative that anyone who isn't on the left is a Russian controlled Nazi, lol.",
+        "spans": [
+          { "start": 18, "end": 22, "label": "Actor", "note": "CIA and Alphabet agency" },
+          { "start": 28, "end": 28, "label": "Actor", "note": "BBC" }
+        ]
+      },
+      "details": [
+        "An actor passage answers: 'Who are the main actors being alleged with wrongdoing?'",
+        "Actors can be individuals, groups, institutions, or abstract entities.",
+        "If multiple actors are implicated, mark all who share responsibility."
+      ],
+      "controlQuestions": [
+        "Who has negative intentions?",
+        "Who has an agenda or malevolent plans?",
+        "Who are the conspirators?",
+        "Who is doing something to someone else?"
       ]
     },
     {
       "label": "Action",
       "title": "Action",
-      "description": "What the actors are alleged to be doing (the plotting/covering up).",
-      "examples": [
-        {
-          "text": "The conglomerates are manipulating the numbers to hide the truth.",
-          "spans": [ { "start": 20, "end": 32, "label": "Action", "note": "manipulating" } ]
-        }
+      "color": "success",
+      "numButton": 2,
+      "description": "What is the actor doing or planning to do to cause negative outcomes?",
+      "example": {
+        "text": "SS: New report alleges Hillary Clinton oversaw a multi-billion dollar fraud/theft, and high-ranking FBI agents are now coming forward with more details about it.",
+        "spans": [
+          { "start": 6, "end": 6, "label": "Action", "note": "oversaw" }
+        ]
+      },
+      "details": [
+        "Action passages answer: 'Which actions do the actors undertake (or intend to undertake)?'",
+        "Actions may be direct or indirect.",
+        "Example direct: 'FEMA proposes Martial Law and gun confiscation.'",
+        "Example indirect: 'Goldman Sachs won’t work on an IPO unless conditions are met.'"
+      ],
+      "controlQuestions": [
+        "How are negative consequences created?",
+        "What is the actor doing or trying to achieve?",
+        "What is done to influence the world?",
+        "How does the actor pose a threat or create outcomes?"
       ]
     },
     {
       "label": "Effect",
       "title": "Effect",
-      "description": "Consequences or outcomes attributed to the alleged scheme.",
-      "examples": [
-        {
-          "text": "This plan will silence dissent and scare people from asking questions.",
-          "spans": [ { "start": 14, "end": 29, "label": "Effect", "note": "silence dissent" } ]
-        }
+      "color": "neutral",
+      "numButton": 3,
+      "description": "What are the negative consequences of the actor's agenda?",
+      "example": {
+        "text": "SS: I bet $100 there's some juicy stuff in there that some people don't want to ever see the light of day. According to the Daily Telegraph, Maxwell maintained a secret email server and failed to secure it. Maxwell claims that her email server was hacked after a court unsealed approximately 2,000 pages of documents last August, according to the Daily Mail. The extent of the breach is unknown. If emails were obtained in the hack they could showcase embarrassing information on Epstein's clients, alleged victims, and co-conspirators in his massive sex trafficking operation.",
+        "spans": [
+          { "start": 91, "end": 92, "label": "Effect", "note": "sex trafficking" }
+        ]
+      },
+      "details": [
+        "Effect passages answer: 'What are the negative consequences of the actor’s agenda?'",
+        "Effect is distinct from action: effect = outcome, action = plan/step.",
+        "Example: Fine imposed is the effect, proposal to fine is the action."
+      ],
+      "controlQuestions": [
+        "If anyone is negatively affected, how are these consequences described?",
+        "What are the negative outcomes of the conspiracy?"
       ]
     },
     {
       "label": "Victim",
       "title": "Victim",
-      "description": "Who is harmed or targeted by the alleged scheme.",
-      "examples": [
-        {
-          "text": "Ordinary citizens are the ones paying the price for their lies.",
-          "spans": [ { "start": 0, "end": 18, "label": "Victim", "note": "Ordinary citizens" } ]
-        }
+      "color": "danger",
+      "numButton": 4,
+      "description": "Who is negatively affected by the actor's agenda?",
+      "example": {
+        "text": "SS: Rudy drops radical bombs on Fox and Friends implicating the highest levels of government, the ambassadors, and intelligence agencies. He makes names and has recorded testimony from individuals banned from the United States to keep it quiet. The hosts get nervous that such things are being revealed on their show live.",
+        "spans": [
+          { "start": 28, "end": 33, "label": "Victim", "note": "individuals banned from the United States" }
+        ]
+      },
+      "details": [
+        "Victim passages answer: 'Who suffers the negative effects of the conspiracy?'"
+      ],
+      "controlQuestions": [
+        "Who is negatively impacted?",
+        "Who do actors target?"
       ]
     },
     {
       "label": "Evidence",
       "title": "Evidence",
-      "description": "Anecdotes, ‘proof’, or purported signs used to justify the claim.",
-      "examples": [
-        {
-          "text": "Look at the leaked emails: it’s obvious there’s a cover-up.",
-          "spans": [ { "start": 12, "end": 25, "label": "Evidence", "note": "leaked emails" } ]
-        }
+      "color": "warning",
+      "numButton": 5,
+      "description": "Which arguments or expressions does the writer use to support claims?",
+      "example": {
+        "text": "SS: Just a reminder that various extremist groups that are out there, trying to recruit people, are actually CIA and other Alphabet agency Honeypots. In this case, the BBC is even admitting this guy is CIA but says he's only \"former\" CIA (yea right) and also they are making sure to create a link to Russia so they can continue with the narrative that anyone who isn't on the left is a Russian controlled Nazi, lol. Nice try Feds!",
+        "spans": [
+          { "start": 27, "end": 31, "label": "Evidence", "note": "BBC is admitting" },
+          { "start": 40, "end": 40, "label": "Evidence", "note": "‘former’ CIA" },
+          { "start": 42, "end": 43, "label": "Evidence", "note": "yea right" },
+          { "start": 56, "end": 62, "label": "Evidence", "note": "continue with the narrative" }
+        ]
+      },
+      "details": [
+        "Evidence passages answer: 'How does the writer argue the conspiracy exists?'",
+        "Examples: coincidences, suspicious links, patterns, rebuttals of mainstream claims."
+      ],
+      "controlQuestions": [
+        "How is the author expressing that there is more going on?",
+        "Why does the author think it is worth sharing?",
+        "How does the author refute mainstream knowledge?",
+        "How does the author present evidence, links, inconsistencies?"
       ]
     }
   ]
