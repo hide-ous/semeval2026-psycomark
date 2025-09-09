@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy:gh": "ng build --configuration production --base-href /semeval2026-psycomark/ && npx angular-cli-ghpages --dir dist/semeval2026-psycomark"
   },
   "prettier": {
     "printWidth": 100,
