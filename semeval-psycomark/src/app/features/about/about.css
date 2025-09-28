@@ -1,0 +1,25 @@
+ul {
+  margin-bottom: 1.5rem;
+}
+
+/* Styles for the announcement box (equivalent to the Tailwind classes removed from the template) */
+.announcement-box {
+  /* bg-blue-50, border-l-4, border-blue-500, p-6 (6 units = 1.5rem or 24px) */
+  background-color: #eff6ff; /* blue-50 */
+  border-left-width: 4px;
+  border-left-color: #3b82f6; /* blue-500 */
+  padding: 1.5rem; /* Added margin/padding for content inside (p-6) */
+  /* Added rounded corners (rounded-lg) and improved shadow (shadow-inner) */
+  border-radius: 0.5rem; /* Equivalent to rounded-lg */
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); /* Equivalent to a subtle shadow-inner */
+}
+
+/* Styles for the hr inside the announcement box */
+.announcement-box hr {
+  /* my-6, border-blue-300 */
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-color: #93c5fd; /* blue-300 */
+  border-style: solid;
+  border-width: 1px 0 0 0;
+}
